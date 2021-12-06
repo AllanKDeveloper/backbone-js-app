@@ -1,0 +1,9 @@
+<ul>
+  <input type="text" class="content" placeholder="Press ENTER to add" />
+  <% _.each(projects, function(project){ %>
+  <li>
+    <a href='<%= project.get("url") %>'><%= project.get("title") %></a>
+    <a class="delete" href="#" id='<%= project.get("title") %>'>[remove]</a>
+  </li>
+  <% }); %>
+</ul>
